@@ -14,5 +14,5 @@ This app finds prime numbers and is built using Xcode 7 and Swift 2.  The code w
 * Apple also advises to not abbreviate the names of things and to spell them out, even if they're long.
 
 ## Attributions:
-* Udemy 'The Complete iOS 9 Developer Course' Guessing Game tutorial by Rob Percival
+* Udemy 'The Complete iOS 9 Developer Course' Finding Primes App tutorial by Rob Percival
 * ['Display An Alert View Tutorial' @ www.ioscreator.com](http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift)
