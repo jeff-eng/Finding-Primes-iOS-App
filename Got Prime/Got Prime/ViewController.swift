@@ -19,37 +19,43 @@ class ViewController: UIViewController {
     
     @IBAction func checkIfPrimeButton(sender: AnyObject) {
         
-        let numberConvertedFromTextField: Int = Int(numberTextField.text!)!
+        if let numberConvertedFromTextField: Int = Int(numberTextField.text!) {
         
-        func isPrime(number: Int) -> Bool {
-            if number <= 1 {
-                return false
-            }
-            if number <= 3 {
-                return true
-            }
-            
-            var i = 2
-            
-            while i*i <= number {
-                if number % i == 0 {
+            func isPrime(number: Int) -> Bool {
+                if number <= 1 {
                     return false
                 }
-                
-                i = i + 1
-            }
+                if number <= 3 {
+                    return true
+                }
             
-            return true
-        }
+                var i = 2
+            
+                while i*i <= number {
+                    if number % i == 0 {
+                        return false
+                    }
+                
+                    i = i + 1
+                }
+            
+                return true
+            }
         
-        isPrime(numberConvertedFromTextField)
+            isPrime(numberConvertedFromTextField)
         
-        if isPrime(numberConvertedFromTextField) == true {
-            resultLabel.text = "\(numberConvertedFromTextField) is a prime number!"
-        } else {
+            if isPrime(numberConvertedFromTextField) == true {
+                resultLabel.text = "\(numberConvertedFromTextField) is a prime number!"
+            } else {
             resultLabel.text = "\(numberConvertedFromTextField) is not a prime number."
-        }
+            }
         
+        } else {
+            let alertController = UIAlertController(title: "Alert", message: "Hey! You didn't enter a number!!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     
