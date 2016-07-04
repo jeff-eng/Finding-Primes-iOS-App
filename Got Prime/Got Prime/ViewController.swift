@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBAction func clearButtonPressed(sender: AnyObject) {
         numberTextField.text = ""
+        resultLabel.text = ""
     }
     
     @IBAction func checkIfPrimeButton(sender: AnyObject) {
